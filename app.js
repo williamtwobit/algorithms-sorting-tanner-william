@@ -110,7 +110,15 @@ function knownHighNLow(arr,high,low){
   });
   return output;
 }
-// const arrSort = [2,19,49,16,28,45,45,34,12,8,48,49];
+const arrSort = [2,19,49,16,28,45,45,34,12,8,48,49];
 // console.log('sorted: ', knownHighNLow(arrSort, 50, 0));
 
 
+function makeRandom(arr){
+  for(let i = 0; i < arr.length; i++){
+    swap(arr, Math.floor(Math.random() * arr.length), Math.floor(Math.random() * arr.length));
+  }
+  return arr;
+}
+
+makeRandom(arrSort);
