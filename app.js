@@ -126,7 +126,29 @@ makeRandom(arrSort);
 const titles = ["Frozen, the book", "Alice in Wonderland", "Harry Potter", "Harry Potter and The Chamber of Secrets", "Hitch Hiker's Guide to the Galaxy"];
 
 function sortBooks(books){
-
+  let swaps = 0;
+  let j = 0;
+  let i = 0;
+  while(i < books.length){
+    const bookA = books[i];
+    let bookB = 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
+    if(books[i+1]){
+      bookB = books[i+1];
+    }
+    if(bookA[j] === bookB[j]){
+      j++;
+    }
+    else if(bookA[j] > bookB[j]){
+      swap(books, i, i+1);
+      swaps++;
+    }
+    i++;
+  }
+  if(swaps > 0){
+    return sortBooks(books);
+  }
+  console.log(books);
+  return books;
 }
 
 console.log(sortBooks(titles));
