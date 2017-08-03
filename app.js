@@ -1,3 +1,5 @@
+const arr = [15,4,8,16,42,23];
+
 function swap(array, i,j){
   const tmp = array[i];
   array[i] = array[j];
@@ -23,8 +25,6 @@ function bubbleSort(array){
   console.log('Finished Product:', array);
   return array;
 }
-
-const arr = [15,4,8,16,42,23];
 
 // bubbleSort(arr);
 
@@ -65,3 +65,5 @@ function mergeSort(arr) {
   right = mergeSort(right);
   return merge(left, right, arr);
 }
+
+// mergeSort(arr);
