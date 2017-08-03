@@ -93,3 +93,24 @@ function partition(array,start,end){
   swap(array,end-1,j);
   return j;
 }
+
+// quickSort(arr);
+
+function knownHighNLow(arr,high,low){
+  let output = [];
+  let container = [];
+  for(let i = 0; i < high; i++){
+    container.push([]);
+  }
+  arr.forEach(num => {
+    container[num].push(num);
+  });
+  container.forEach(arr => {
+    output = [...output, ...arr];
+  });
+  return output;
+}
+// const arrSort = [2,19,49,16,28,45,45,34,12,8,48,49];
+// console.log('sorted: ', knownHighNLow(arrSort, 50, 0));
+
+
