@@ -122,3 +122,11 @@ function makeRandom(arr){
 }
 
 makeRandom(arrSort);
+
+const titles = ["Frozen, the book", "Alice in Wonderland", "Harry Potter", "Harry Potter and The Chamber of Secrets", "Hitch Hiker's Guide to the Galaxy"];
+
+function sortBooks(books){
+
+}
+
+console.log(sortBooks(titles));
