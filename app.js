@@ -35,7 +35,7 @@ function merge(left, right, arr){
 
   while(leftIndex < left.length && rightIndex < right.length){
     if(left[leftIndex] < right[rightIndex]){
-      arr[outputIndex++] = right[rightIndex++];
+      arr[outputIndex++] = left[leftIndex++];
     }else{
       arr[outputIndex++] = right[rightIndex++];
     }
@@ -48,7 +48,7 @@ function merge(left, right, arr){
   for(let i = rightIndex; i < right.length; i++){
     arr[outputIndex++] = right[i];
   }
-  
+
   return arr;
 }
 
